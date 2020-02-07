@@ -1,0 +1,38 @@
+
+SEL_HTML_RUNNER="/usr/local/bin/selenium-html-runner-3.8.0.jar"
+REPORT_FOLDER="./report"
+BASE_URL="http://localhost:8080"
+declare -a BROWSERS=("firefox" "googlechrome")
+declare -a SUITES=("suite_empresas.htm" "suite_usuarios01_cadastro.htm")
+
+REPORT_FOLDER_AUX=$(date +"%Y-%m-%d_%H-%M-%S-%N")
+
+for BROWSER in "${BROWSERS[@]}"
+do
+	for SUITE in "${SUITES[@]}"
+	do
+		java -jar $SEL_HTML_RUNNER -htmlSuite *$BROWSER $BASE_URL $SUITE $REPORT_FOLDER/$REPORT_FOLDER_AUX/$SUITE"_"$BROWSER
+	done
+done
+
+
+
+
+
+
+----------------
+#!/bin/bash
+
+# param1: version
+# param2: file to compare
+svn diff --diff-cmd='meld' -r$1 $2;
+
+-----------------------------
+
+***********************
+multiple lines comment
+: '
+line 1 here
+line 2 here
+'
+***********************

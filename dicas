@@ -1,0 +1,9 @@
+
+https://www.shellscript.sh/philosophy.html
+
+One weakness in many shell scripts is lines such as:
+cat /tmp/myfile | grep "mystring"
+
+which would run much faster as:
+grep "mystring" /tmp/myfile
+------------------------------------------------------------------------------------------------

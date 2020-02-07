@@ -1,0 +1,16 @@
+https://www.shellscript.sh/test.html
+
+
+$ type [
+[ is a shell builtin
+
+$ which [
+/usr/bin/[
+
+
+$ ls -l /usr/bin/[
+lrwxrwxrwx 1 root root 4 Mar 27 2000 /usr/bin/[ -> test
+
+
+$ ls -l /usr/bin/test
+-rwxr-xr-x 1 root root 35368 Mar 27  2000 /usr/bin/test
